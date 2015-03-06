@@ -1,29 +1,31 @@
 
-# metalsmith-metallic <img src="https://travis-ci.org/weswigham/metalsmith-metallic.svg">
+# metalsmith-highlight
 
-  A [Metalsmith](http://metalsmith.io) plugin to highlight code in Markdown files.
+A [Metalsmith](http://metalsmith.io) plugin to highlight code in Markdown files. Fork of [metalsmith-metallic](https://github.com/weswigham/metalsmith-metallic), to support minimatch and do not strip whitespace from beginning/ending of code.
 
 ## Installation
 
-    $ npm install metalsmith-metallic
-    
+```shell
+npm install metalsmith-metallic
+```
+
 ## Setup
 
 Include a [highlight.js](http://highlightjs.org/download/) theme somewhere in your templates.
 
-Ex:
+Example:
 ```html
 <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
 ```
 
 ## CLI Usage
 
-  Install via npm and then add the `metalsmith-metallic` key to your `metalsmith.json` plugin, like so:
+Install via npm and then add the `metalsmith-highlight` key to your `metalsmith.json` plugin, like so:
 
 ```json
 {
   "plugins": {
-    "metalsmith-metallic": true
+    "metalsmith-highlight": true
   } 
 }
 ```
@@ -31,11 +33,10 @@ Ex:
 ## Javascript Usage
 
 ```js
-var metallic = require('metalsmith-metallic');
+var highlight = require('metalsmith-highlight');
 
-metalsmith.use(metallic());
+metalsmith.use(highlight());
 ```
 
 ## License
-
-  MIT
+MIT
