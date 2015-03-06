@@ -35,8 +35,9 @@ Install via npm and then add the `metalsmith-highlight` key to your `metalsmith.
 ```js
 var highlight = require('metalsmith-highlight');
 
-metalsmith.use(highlight());
+metalsmith.use(highlight({
+  pattern: '**/*.md', // minimatch
+  patternOptions: {}, // sent to minimatch
+}));
 ```
-
-## License
-MIT
+Read about [patternOptions at minimatch](https://github.com/isaacs/minimatch#options).
